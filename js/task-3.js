@@ -22,10 +22,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const pictureEl = (picture) => {
+    return `<li><img src="${picture.url}" alt="${picture.alt}"></li>`
+}  ;
 const listEl = document.querySelector('#gallery');
-console.log(listEl);
 
-//const createListOfImagesEl = listEl.insertAdjacentHTML('afterBegin', '<li> `` </li>');
-listEl.forEach(element => {
-    const createListOfImagesEl = listEl.insertAdjacentHTML('afterBegin', '<li> `` </li>');
-});
+const makeImgCollection = images.map(pictureEl).join(" ");
+
+const createListOfImagesEl = listEl.insertAdjacentHTML('afterBegin', makeImgCollection);
+console.log(createListOfImagesEl);

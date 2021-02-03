@@ -6,9 +6,19 @@
 // Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 
 
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+const incrementBtn = document.querySelector('[data-action="increment"]');
+const spanCounter = document.querySelector('#value');
+let counterValue = 0 ; //будет хранится текущее значение счетчика.
 
-// {/* <div id="counter">
-//   <button type="button" data-action="decrement">-1</button>
-//   <span id="value">0</span>
-//   <button type="button" data-action="increment">+1</button>
-// </div> */}
+const decrementFn = () => { 
+    counterValue -=  1;
+    return spanCounter.textContent = counterValue;
+};
+
+const incrementFn = () => { 
+    counterValue += 1;
+     return spanCounter.textContent = counterValue;
+};
+ decrementBtn.addEventListener('click', decrementFn)
+incrementBtn.addEventListener('click', incrementFn)

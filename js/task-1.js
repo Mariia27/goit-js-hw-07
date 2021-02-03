@@ -14,6 +14,7 @@
 const findAllCategories = document.querySelectorAll('.item');
 console.log(`В списке ${findAllCategories.length} категории.`);
 //===================================================
+const findNameOfTittle = document.querySelector('h2');
 findAllCategories.forEach(item => {
 const findNameOfTittle = document.querySelector('h2').textContent; 
     console.log(` Категория: ${item}`);
