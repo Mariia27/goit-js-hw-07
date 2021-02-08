@@ -21,10 +21,7 @@ findAllCategories.forEach(item => {
     console.log(` Категория: ${findNameOfTittle.textContent}`);
     console.log(`Количество элементов: ${findNumberOfElement}`);
  });
-//==========================================================
 
-// const findNumberOfElement = document.querySelectorAll(' li').length;
-// console.log(`Количество элементов: ${findNumberOfElement}`);
 
 
 
