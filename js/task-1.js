@@ -14,15 +14,17 @@
 const findAllCategories = document.querySelectorAll('.item');
 console.log(`В списке ${findAllCategories.length} категории.`);
 //===================================================
-const findNameOfTittle = document.querySelector('h2');
+
 findAllCategories.forEach(item => {
-const findNameOfTittle = document.querySelector('h2').textContent; 
-    console.log(` Категория: ${item}`);
+    const findNameOfTittle = item.querySelector('h2'); 
+    const findNumberOfElement = item.querySelectorAll('li').length;
+    console.log(` Категория: ${findNameOfTittle.textContent}`);
+    console.log(`Количество элементов: ${findNumberOfElement}`);
  });
 //==========================================================
 
-const findNumberOfElement = document.querySelectorAll('.item ul li').length;
-console.log(`Количество элементов: ${findNumberOfElement}`);
+// const findNumberOfElement = document.querySelectorAll(' li').length;
+// console.log(`Количество элементов: ${findNumberOfElement}`);
 
 
 

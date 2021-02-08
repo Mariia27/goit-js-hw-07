@@ -12,19 +12,14 @@ const ingredients = [
 
 //
 //console.log(listEl);
-const createList = ingredient => {
 const listEl = document.querySelector('#ingredients');
+const createList = ingredient => {
 const elementOfList = document.createElement('li');
-    elementOfList.textContent = `${ingredient}`;
-    listEl.appendChild(elementOfList);
+  elementOfList.textContent = `${ingredient}`;
     return elementOfList;
 };
+const createEl = ingredients.map(createList);
 
-ingredients.forEach(ingredient => {
-    console.log(createList(ingredient));
-})
+listEl.append(...createEl);
 
-// ingredients.map(ingredient => {
-//     console.log(createList(ingredient))
-// })
 

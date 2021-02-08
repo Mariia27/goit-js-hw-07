@@ -9,12 +9,9 @@ let noName = '';
 
 const userName = (text) => {
     if (text.currentTarget.value !== noName) {
-        //spanEl.textContent = noName;
-        spanEl.textContent = text.currentTarget.value;
-    } else {
-spanEl.textContent = 'незнакомец';
+
+        spanEl.textContent = text.currentTarget.value || 'незнакомец';
     }
-    
-    //spanEl.textContent = text;
+
  };
 inputEl.addEventListener('input', userName)
